@@ -1,5 +1,13 @@
 import random
 
+def main():
+    user_score = float(input("Enter score: "))
+    print(determine_score_status(user_score))
+
+    random_score = random.randint(0, 100)  # Generate a random score between 0 and 100
+    print("Random score:", random_score)
+    print(determine_score_status(random_score))
+
 def determine_score_status(score):
     """
     Determine the status of the score.
@@ -13,13 +21,6 @@ def determine_score_status(score):
     else:
         return "Bad"
 
-def main():
-    user_score = float(input("Enter score: "))
-    print(determine_score_status(user_score))
-
-    random_score = random.randint(0, 100)  # Generate a random score between 0 and 100
-    print("Random score:", random_score)
-    print(determine_score_status(random_score))
 
 if __name__ == "__main__":
     main()
